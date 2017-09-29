@@ -1,2 +1,16 @@
 <h1>The MacroPuzzler</h1>
 <h4>Fastest way to Find the Best Fit for the Feast!</h4>
+
+<% @foods.each do |food| %>
+  <div>
+    <h1><%= food.name %><h1>
+    <h2><%= food.restaurant %></h2>
+    <ul>
+      <li>Fat: <%= food.fat %></li>
+      <li>Carbs: <%= food.carbs %></li>
+      <li>Protein: <%= food.protein %></li>
+      <li>Calories: <%= food.calories %></li>
+    </ul>
+
+  </div>
+<%end%>
