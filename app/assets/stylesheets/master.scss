@@ -1,1 +1,23 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Henny+Penny');
+
+body{
+  background: image_url('puzzle.jpg');
+  font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+}
+.navbar-custom{
+  background-color:#080c7c;
+	border-radius:0;
+}
+
+.navbar{
+  box-shadow: 3px 3px 3px #FF7F50;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #FF7F50;
+  font-family: 'Henny Penny', cursive;
+  letter-spacing: -0.3px;
+  font-weight: 500;
+  font-size: 32px;
+}
