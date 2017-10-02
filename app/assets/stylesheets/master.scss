@@ -1,9 +1,10 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Henny+Penny');
+@import 'font-awesome';
 
 body{
   background: image_url('puzzle.jpg');
-  font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }
 .navbar-custom{
   background-color:#080c7c;
@@ -20,4 +21,28 @@ body{
   letter-spacing: -0.3px;
   font-weight: 500;
   font-size: 32px;
+}
+.custom-box{
+  border-radius: 71px 0px 71px 0px;
+  -moz-border-radius: 71px 0px 71px 0px;
+  -webkit-border-radius: 71px 0px 71px 0px;
+  border: 2px solid #080c7c;
+  background-color: #FF7F50;
+  padding-top:20px;
+  padding-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.front-header{
+  text-align: center;
+  color: #080c7c;
+  padding-top: 10px;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin:0;
+  padding:0;
+}
+
+.navbar-nav > .nav-item > .nav-link{
+  color: #00ffff;
 }

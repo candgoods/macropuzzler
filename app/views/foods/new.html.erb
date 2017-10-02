@@ -1,0 +1,14 @@
+
+<div class="custom-box col-10 offset-1">
+  <h1>Add a New Favorite Fit Here!</h1>
+  <%= simple_form_for @food do |f| %>
+   <%= f.input :name %>
+   <%= f.input :restaurant %>
+   <%= f.input :fat %>
+   <%= f.input :carbs %>
+   <%= f.input :protein %>
+   <%= f.input :calories %>
+   <br/>
+   <%= f.submit 'Add', class: 'basic' %>
+ <% end %>
+</div>
