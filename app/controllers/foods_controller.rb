@@ -1,8 +1,9 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
-  
+
   def index
-    @foods = Food.all
+    #@foods = Food.all
+    @foods = Food.paginate(:page => params[:page], :per_page => 10)
   end
 
   def new
@@ -12,6 +13,10 @@ class FoodsController < ApplicationController
   def create
     Food.create(food_params)
     redirect_to root_path
+  end
+
+  def about
+    
   end
 
   private
