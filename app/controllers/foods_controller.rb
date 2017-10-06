@@ -11,12 +11,12 @@ class FoodsController < ApplicationController
   end
 
   def create
-    Food.create(food_params)
+    current_user.foods.create(food_params)
     redirect_to root_path
   end
 
   def about
-    
+
   end
 
   private
