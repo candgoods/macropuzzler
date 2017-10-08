@@ -3,7 +3,9 @@ class FoodsController < ApplicationController
 
   def index
     #@foods = Food.all
-    @foods = Food.paginate(:page => params[:page], :per_page => 10)
+    #@foods = Food.paginate(:page => params[:page], :per_page => 10)
+    @q = Food.ransack(params[:q])
+    @foods = @q.result.paginate(:page => params[:page], :per_page => 10)
   end
 
   def new
@@ -18,6 +20,11 @@ class FoodsController < ApplicationController
   def about
 
   end
+
+  def findfits
+
+  end
+
 
   private
 
