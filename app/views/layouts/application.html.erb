@@ -29,18 +29,18 @@
             <li class="nav-item">
                <%= link_to 'My Account', user_path(current_user), class: 'nav-link' %>
             </li>
+            <li class="nav-item">
+              <%= link_to new_food_path, class: 'nav-link' do %>
+              <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+              Add Fits
+              <%end%>
+            </li>
           <% else %>
             <li class="nav-item">
               <%= link_to 'Sign Up to Contribute', new_user_registration_path, class: 'nav-link' %>
             </li>
             <li class="nav-item">
               <%= link_to 'Sign In', new_user_session_path, class: 'nav-link' %>
-            </li>
-            <li class="nav-item">
-              <%= link_to new_food_path, class: 'nav-link' do %>
-              <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
-              Add Fits
-              <%end%>
             </li>
           <% end %>
         </ul>

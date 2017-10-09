@@ -4,6 +4,8 @@
 
   <div class="findfit-box col-4 offset-4">
     <h3>FIND FITS HERE</h3>
+    <small>outputs foods under or equal to given macros</small>
+    </br>
     </br>
     <%= search_form_for @q, url: root_path do |f| %>
     <div>
@@ -26,18 +28,30 @@
     <% end %>
   </div>
 
+  </br>
+  </br>
+  
+  <% if @q.result.count == 0 %>
 
-<% @foods.each do |food| %>
-  <div class = "custom-box col-10 offset-1">
-    <h2><strong><%= food.name %></strong><h2>
-    <i><%= food.restaurant %></i>
-    <ul>
-      <li>Fat: <%= food.fat %></li>
-      <li>Carbs: <%= food.carbs %></li>
-      <li>Protein: <%= food.protein %></li>
-      <li>Calories: <%= food.calories %></li>
-    </ul>
+  <div class = 'null_results'>
+    <h2> 0 search results returned </h2>
   </div>
-<%end%>
+
+  <% else %>
+
+    <% @foods.each do |food| %>
+      <div class = "custom-box col-10 offset-1">
+        <h2><strong><%= food.name %></strong><h2>
+        <i><%= food.restaurant %></i>
+        <ul>
+          <li>Fat: <%= food.fat %></li>
+          <li>Carbs: <%= food.carbs %></li>
+          <li>Protein: <%= food.protein %></li>
+          <li>Calories: <%= food.calories %></li>
+        </ul>
+      </div>
+    <%end%>
+
+<% end %>
 
 <%= will_paginate @foods, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
