@@ -27,11 +27,13 @@ body{
   -moz-border-radius: 71px 0px 71px 0px;
   -webkit-border-radius: 71px 0px 71px 0px;
   border: 2px solid #080c7c;
-  background-color: #FF7F50;
+  background-color: #e8effc;
   padding-top:20px;
+  padding-bottom: 20px;
   padding-left: 30px;
   margin-top: 10px;
   margin-bottom: 15px;
+  color: #080c7c;
 }
 .front-header{
   text-align: center;
@@ -100,4 +102,8 @@ small{
   color: white;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.home{
+  background-color: #e8effc;
 }

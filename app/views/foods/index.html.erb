@@ -4,25 +4,26 @@
 
   <div class="findfit-box col-4 offset-4">
     <h3 class = "search">FIND FITS HERE</h3>
-    <small>lists foods less than or equal to given macros</small>
-    </br>
-    </br>
+    <br />
     <%= search_form_for @q, url: root_path do |f| %>
     <div>
       <%= f.label :fat_lteq, "Fat:" %>
       <%= f.search_field :fat_lteq %>
     </div>
-    </br>
+    <br />
     <div>
       <%= f.label :carbs_lteq, "Carbs:" %>
       <%= f.search_field :carbs_lteq %>
     </div>
-    </br>
+    <br />
     <div>
       <%= f.label :protein_lteq, "Protein:" %>
       <%= f.search_field :protein_lteq %>
     </div>
-    </br>
+    <br />
+    <i>Output as fat/carbs/protein less than or equal to inputs</i>
+    <br />
+    <br />
     <%= f.submit %>
     <%= link_to "Clear Search", request.path, class:"cancel-button" %>
     <% end %>
@@ -41,15 +42,10 @@
   <% else %>
 
     <% @foods.each do |food| %>
-      <div class = "custom-box col-10 offset-1">
+      <div class = "custom-box col-6 offset-3">
         <h2><strong><%= food.name %></strong><h2>
         <i><%= food.restaurant %></i>
-        <ul>
-          <li>Fat: <%= food.fat %></li>
-          <li>Carbs: <%= food.carbs %></li>
-          <li>Protein: <%= food.protein %></li>
-          <li>Calories: <%= food.calories %></li>
-        </ul>
+        <h4>Macros: <%= food.fat %>/<%= food.carbs %>/<%= food.protein %></h4>
       </div>
     <%end%>
 
